@@ -27,13 +27,13 @@ import { HousingService } from '../housing.service';
   `,
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
-  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 
+export class HomeComponent {
   housingLocationList: HousingLocation[] = [];
   housingService: HousingService = inject(HousingService);
-  
+
   constructor() {
     this.housingLocationList = this.housingService.getAllHousingLocations();
   }
+
 }
